@@ -1,0 +1,290 @@
+
+
+.home,
+.services,
+.about,
+.contact {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.services {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.services >h1 {
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+
+
+.tab-container{ 
+  padding-inline: 45px;
+}
+
+.about {
+  background-color:rgb(121 120 120);
+  background-position: center;
+  background-size: fill;
+  height: 200px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+.VIP {
+  background-color:rgb(121 120 120);
+  background-position: center;
+  background-size: fill;
+  height: 200px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+@media screen and (max-width: 1156px) {
+  .VIP{
+    font-size: 46px;
+  }
+  
+}
+
+.MuiPaper-root.MuiPaper-elevation3.MuiPaper-rounded {
+    width: 100%;
+    padding: 20px;
+    height: min-content;
+    align-self: center;
+    background-color: #5f5f5f9e;
+}
+.vip-content{
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  display: inline-flex;
+}
+
+.viprow1{
+  display:inline-flex ;
+  width:100%;
+}
+
+
+
+.vip-contact-heading{
+  text-align: left;
+}
+.vip_logo_wrapper > img{
+  height: 450px;
+}
+
+.vip-contact-conatiner {
+  width: 100%;
+}
+
+.viprow1 > img{
+  width: inherit;
+  max-width: min-content;
+}
+
+@media only screen and (max-width:885px)
+{
+  .viprow1{
+    flex-direction: column; 
+  }
+  .vip-paper{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+  }
+  
+}
+@media only screen and (max-width:390px)
+{
+  .vip-paper{
+    text-align: center;
+  }
+}
+
+.testimonials{
+  text-align: center;
+  padding-top: 10%;
+  color: rgb(0, 51, 142);
+}
+.myCarousel > p{
+  text-align: left;
+}
+.contact {
+  background-color:rgb(121 120 120);
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+
+@media screen and (max-width:960px) {
+  .contact-row1{
+    display: inline-block;
+  }
+  .contact-form{
+    font-size: medium;
+    margin-top: 48px;
+  }
+  .contact-form {
+    text-align: -webkit-center;
+    align-self: center;
+    padding-bottom: 20px;
+  }
+  .contact-info{
+    font-size: medium;
+    margin-top: 20px;
+    padding-inline: 20px;
+  }
+  h2.MuiTypography-root.MuiTypography-h2.MuiTypography-gutterBottom {
+    text-align: center;
+}
+}
+
+@media screen and (min-width:960px) {
+  .contact-row1{
+    display: flex;
+    padding: 50px;
+  }
+  .contact-form{
+    width:50%;
+    padding:15px;
+    font-size: medium;
+  }
+  .contact-form {
+    text-align: -webkit-center;
+    align-self: center;
+    border-left: 2px solid #dc0000;
+  }
+  .contact-info{
+    width: 50%;
+    padding:15px;
+    font-size: medium;
+  }
+  
+
+}
+
+
+.contact-form-container{
+  padding-inline: 15%;
+}
+
+input#name {
+  width: 100%;
+  padding:15px;
+  font-size: medium;
+}
+input#email {
+  width: 100%;
+  padding:15px;
+  font-size: medium;
+}
+input#subject {
+  width: 100%;
+  padding:15px;
+  font-size: medium;
+}
+input#message {
+  width: 100%;
+  padding:15px;
+  font-size: medium;
+}
+input#PhoneNumber {
+  width: 100%;
+  padding:15px;
+  font-size: medium;
+}
+.faq{
+  background-color:rgb(121 120 120);
+  background-position: center;
+  background-size: fill;
+  height: 200px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 70px;
+  vertical-align: middle;
+  
+}
+
+.faq-header{
+  font-size: 50px;
+  display: inline-flex;
+  color:#fff;
+}
+
+@media screen and (max-width: 960px) {
+  .faq{
+    background-color:rgb(121 120 120);
+    background-position: center;
+    background-size: fill;
+    height: 200px;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 40px;
+    vertical-align: middle;
+    
+  }
+  
+  .faq-header{
+    font-size: 30px;
+    display: inline-flex;
+    color:#fff;
+  }
+}
+
+
+
+.employment{
+  background-color:rgb(121 120 120);
+  background-position: center;
+  background-size: fill;
+  height: 200px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 70px;
+  vertical-align: middle;
+  
+}
+.row1{
+  display: contents;
+  height:350px;
+  background-image: "./images/graybackground.jpg";
+}
+.container1{
+  padding-left:5%;
+  padding-top:5%;
+  width:60%;
+
+}
+
+
+@media screen and (max-width:800px) {
+  .container1{
+    width: 98%;
+  }
+  .row1{
+    display: contents;
+  }
+}
+  
+
+
+
+

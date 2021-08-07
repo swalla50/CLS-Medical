@@ -1,0 +1,13 @@
+.MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded {
+    background: #696969;
+    color: white;
+    border: solid #616161;
+}
+
+.MuiAccordionDetails-root {
+    background: #A0A0A0;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiAccordionSummary-expandIcon.MuiIconButton-edgeEnd {
+    color: white;
+}
