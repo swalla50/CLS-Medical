@@ -1,16 +1,16 @@
 import React from 'react'
 import '../styles/overlappingimg.module.css'
-
+import Image from 'next/image'
 
 function Overlappingimg() {
     return (
         <div className='container'>
                 <div className="image-stack">
                     <div className="image-stack__item image-stack__item--top">
-                        <img src="../images/services-medical.jpg" alt="folded-arms"/>
+                        <Image src="/images/services-medical.jpg" alt="folded-arms" width='800px' height='500px'/>
                     </div>
                     <div className="image-stack__item image-stack__item--bottom">
-                        <img src="../images/services-military.jpg" alt="military"/>
+                        <Image src="/images/services-military.jpg" alt="military" width='800px' height='500px'/>
                     </div>
                     
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Serving.module.css'
+import Image from 'next/image'
 
 
 function Serving() {
@@ -17,7 +18,7 @@ function Serving() {
                         </div>
                     </div>
                     
-                    <img className='serving-image'src='./images/serving.jpg' alt='servingimage' style={{height:'300px'}}/>
+                    <Image className='serving-image'src='/images/serving.jpg' alt='servingimage' height='600px' width='800px' />
                     
                 </div>
             </div>

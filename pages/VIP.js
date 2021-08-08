@@ -5,7 +5,7 @@ import { Fragment } from 'react';
 import '../styles/App.module.css'
 
 import VIPCard from '../components/VIPCard.js';
-import Link from 'next/link'
+
 
 
 
@@ -55,10 +55,10 @@ function VIP () {
                         </a>
                         </div>
                         </Paper>
-                        <div class="circle" style={{animationDelay:'0s'}}></div>
-                        <div class="circle" style={{animationDelay:'1s'}}></div>
-                        <div class="circle" style={{animationDelay:'2s'}}></div>
-                        <div class="circle" style={{animationDelay:'3s'}}></div>
+                        <div className="circle" style={{animationDelay:'0s'}}></div>
+                        <div className="circle" style={{animationDelay:'1s'}}></div>
+                        <div className="circle" style={{animationDelay:'2s'}}></div>
+                        <div className="circle" style={{animationDelay:'3s'}}></div>
                         
                     </div>
                 

@@ -11,19 +11,19 @@ function Cards() {
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>
                         <CardItem
-                            src='images/customerservice.png' 
+                            src='/images/customerservice.png' 
                             text='We pride ourselves on our ability to offer an unmatched level of customer service to all of our clients!'
                             label='CUSTOMER SERVICE'
                             href='/services'
                         />
                         <CardItem
-                            src='images/reliable.png'
+                            src='/images/reliable.png'
                             text='CLS Medical has proven to be an industry leader for over thirty years.'
                             label='RELIABLE SERVICES'
                             href='/services'
                         />
                         <CardItem
-                            src='images/pricinglogo.png'
+                            src='/images/pricinglogo.png'
                             text='We provide the highest quality products with an all-inclusive service for an affordable rate.'
                             label='PRICING'
                             href='/services'

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Fragment } from 'react'
-import '../../App.css'
-import { Helmet } from 'react-helmet'
+import '../styles/App.module.css'
 import { Title } from '@material-ui/icons';
+import Image from 'next/image'
 
 function BigBear (){
     return (
         <Fragment>
-            <Helmet>
+            
                 <Title>Big Bear Linen Services</Title>
                 <meta
                 name='descirption' 
@@ -26,10 +26,10 @@ function BigBear (){
                 <meta property="og:image" content="https://scontent-a-atl.xx.fbcdn.net/hphotos-frc3/t1.0-9/1383040_272004999628488_512164481_n.jpg"/>
                 <link rel="shortcut icon" href="images/favicon.ico"/>
                 <meta name= 'keywords' content='contact, kennesaw, email, phone, call' />
-            </Helmet>
+            
             <div className= 'bigbear'>
                 <div className='bear-hero'>
-                    <img className='bigbear-img' src='./images/Bigbearhero.png' alt='bigbearimg' style={{width:'100%', heihgt:'1000px'}}></img>
+                    <Image className='bigbear-img' src='/images/Bigbearhero.png' alt='bigbearimg' width='4500px' height='2000px'></Image>
                 </div>
             </div>
         </Fragment>
