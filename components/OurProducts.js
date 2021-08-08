@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/OurProducts.module.css'
+import Image from 'next/image'
 
 
 function OurProducts() {
@@ -11,7 +12,7 @@ function OurProducts() {
             <div className='product-lower-half'>
                 <div className='product-container'>
                     
-                    <img className='product-image'src='./images/product.jpg' alt='productimage' style={{maxHeight:'300px'}}/>
+                    <Image className='product-image'src='/images/product.jpg' alt='productimage' height='600px' width='800px'/>
                     
                     <div className='right-wrapper'>
                         <div className='product-right'>

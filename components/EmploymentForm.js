@@ -23,7 +23,7 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
     <Card>
         <CardContent style={{paddingBottom:'55px'}}>
             <div className= 'contact-form-container' style={{paddingInline:'5%'}}>
-                <form id='form-contact' onSubmit={sendEmail} style={{background: '#d6ffff', borderRadius:'20px', padding:'10px', boxShadow: '0 32px 20px rgb(0 0 0 / 26%)'}} onSubmit={sendEmail}>
+                <form id='form-contact' onSubmit={sendEmail} style={{background: '#d6ffff', borderRadius:'20px', padding:'10px', boxShadow: '0 32px 20px rgb(0 0 0 / 26%)'}}>
                     <div className='form-group'>
                         <div className= 'contactrow'>
                             <h2>Online Job Application</h2>
@@ -70,15 +70,15 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                                 <p>Highest Level of Education:</p><t></t>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
                                     <input type="checkbox" id="education1" name="education1" value="High School" />
-                                    <label for="education1">High School</label>
+                                    <label htmlFor="education1">High School</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
                                     <input type="checkbox" id="education2" name="eductation2" value="College"/>
-                                    <label for="education2"> College</label>
+                                    <label htmlFor="education2"> College</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
                                     <input type="checkbox" id="education3" name="education3" value="Trade School"/>
-                                    <label for="education3"> Trade School</label>
+                                    <label htmlFor="education3"> Trade School</label>
                                 </div>
                             </div><br></br>
 
@@ -86,11 +86,11 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                                 <p>Did you graduate?:</p><t></t>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
                                     <input type="checkbox" id="graduate1" name="graduate1" value="Yes" />
-                                    <label for="graduate1">Yes</label>
+                                    <label htmlFor="graduate1">Yes</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
                                     <input type="checkbox" id="graduate2" name="graduate2" value="No"/>
-                                    <label for="graduate2">No</label>
+                                    <label htmlFor="graduate2">No</label>
                                 </div>
                             </div><br></br>
 
@@ -101,7 +101,7 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                                 </div>
                             </div><br></br>
 
-                            <Divider style={{height:'4px', backgroundColor:'black'}}></Divider>
+                            <Divider style={{height:"4px", backgroundColor:"black"}}></Divider>
 
                             <h2>References</h2>
                             <h3>Please list 5 professional references (no family). Be sure to include Name, Contact Phone Number and the Number of Years they've known you.</h3>
@@ -142,48 +142,48 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                             <div className='genral-group1'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Are you a convicted felon?</p><t></t>
                                 <div className='felon' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="felon1" value="yes" style={{fontSize:'15px',}} name='felon'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="felon1" value="yes" style={{fontSize:'15px',}}/>
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='felon' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="felon2" value="no" name='felon' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="felon2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='general-group2'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Do you have a reliable vehicle?</p><t></t>
                                 <div className='vehicle' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="vehicle1" value="yes" style={{fontSize:'15px',}} name='vehicle'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="vehicle1" value="yes" style={{fontSize:'15px',}}/>
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='felon' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="vehicle2" value="no" name='vehicle' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="vehicle2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='genral-group3'style={{display:'inline-flex'}}>
-                                <p style={{fontSize:'15px'}}>Do you have a valid driver's license?</p><t></t>
+                                <p style={{fontSize:"15px"}}>"Do you have a valid driver's license?"</p><t></t>
                                 <div className='license' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="license1" value="yes" style={{fontSize:'15px',}} name='license'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="license1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='license' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="license2" value="no" name='license' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="license2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='general-group4'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Do you have a clean MVR?</p><t></t>
                                 <div className='MVR' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="MVR1" value="yes" style={{fontSize:'15px',}} name='MVR'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="MVR1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='felon' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="MVR2" value="no" name='MVR' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="MVR2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
@@ -191,60 +191,60 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                             <div className='general-group5'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Can you work weekends?</p><t></t>
                                 <div className='weekend' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="weekend1" value="yes" style={{fontSize:'15px',}} name='weekend'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="weekend1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='weekend' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="weekend2" value="no" name='weekend' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="weekend2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='general-group6'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Have you ever driven a box truck?</p><t></t>
                                 <div className='boxtruck' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="boxtruck1" value="yes" style={{fontSize:'15px',}} name='boxtruck'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="boxtruck1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='boxtruck' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="boxtruck2" value="no" name='boxtruck' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="boxtruck2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='general-group7'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Do you smoke cigarettes?</p><t></t>
                                 <div className='smoke' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="smoke1" value="yes" style={{fontSize:'15px',}} name='smoke'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="smoke1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='smoke' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="smoke2" value="no" name='smoke' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="smoke2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='general-group8'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Have you ever been arrested for a drug related activity?</p><t></t>
                                 <div className='drug' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="drug1" value="yes" style={{fontSize:'15px',}} name='drug'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="drug1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='drug' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="drug2" value="no" name='drug' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="drug2" value="no"  style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
 
                             <div className='general-group9'style={{display:'inline-flex'}}>
                                 <p style={{fontSize:'15px'}}>Do you live within 10 miles of the CLS Medical office?</p><t></t>
                                 <div className='distance' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general1" name="distance1" value="yes" style={{fontSize:'15px',}} name='distance'/>
-                                    <label for="general1">Yes</label>
+                                    <input type="checkbox" id="general1" name="distance1" value="yes" style={{fontSize:'15px',}} />
+                                    <label htmlFor="general1">Yes</label>
                                 </div>
                                 <div className='distance' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="general2" name="distance2" value="no" name='distance' style={{fontSize:'15px'}}/>
-                                    <label for="general2">No</label>
+                                    <input type="checkbox" id="general2" name="distance2" value="no" style={{fontSize:'15px'}}/>
+                                    <label htmlFor="general2">No</label>
                                 </div>
                             </div><br></br>
                     

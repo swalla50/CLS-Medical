@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import FloatingActionButtons from '../components/FloatingActionButtons.js';
 import { Fragment } from 'react';
 import '../styles/App.module.css'
+import Link from 'next/link'
 
 import VIPCard from '../components/VIPCard.js';
 
@@ -50,9 +51,9 @@ function VIP () {
                         <p className='vip-contact-heading' style={{color:'white', fontSize:'30px'}}>
                             770-355-5588
                         </p>
-                        <a href ='/contact' style={{textDecoration:'none'}}>
-                        <FloatingActionButtons to='/contact' className='vip-button'/>
-                        </a>
+                        <Link href='/contact' style={{textDecoration:'none'}}>
+                            <a><FloatingActionButtons to='/contact' className='vip-button'/></a>
+                        </Link>
                         </div>
                         </Paper>
                         <div className="circle" style={{animationDelay:'0s'}}></div>

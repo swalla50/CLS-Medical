@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import '../styles/Testimonials.module.css'
+import Image from 'next/image'
 
 export default class Testimonials extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class Testimonials extends Component {
         interval={6100}
       >
         <div className='Testimonials'>
-          <img src="/images/userdefault.png" alt='user-default'/>
+          <Image src="/images/userdefault.png" alt='user-default' layout='responsive' height='100px' width='100px' />
           <div className="myCarousel">
             <h3>R. Nevarez</h3>
             <h4>Halcyon Hospice</h4>
@@ -26,7 +27,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div>
-          <img src="/images/userdefault.png" alt='user-defualt' />
+          <Image src="/images/userdefault.png" alt='user-defualt' layout='responsive' height='100px' width='100px' />
           <div className="myCarousel">
             <h3>Jane and Stephanie</h3>
             <h4>Roswell Surgery Center</h4>
@@ -40,7 +41,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div>
-          <img src="/images/userdefault.png" alt='user-defualt' />
+          <Image src="/images/userdefault.png" alt='user-defualt'layout='responsive' height='100px' width='100px' />
           <div className="myCarousel">
             <h3>N. Thompson</h3>
             <h4>West Georgia Center for Plastic Surgery</h4>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Dropdown from '../components/Dropdown';
 import { Fragment } from 'react';
+import Image from 'next/image'
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -35,19 +36,19 @@ function Navbar() {
             <nav className= "navbar" id= 'navbar'>
                 <ul className='sponsor-list' style={{listStyleType:'none', display:'inline-flex',marginTop:'20px' ,justifyContent:'center'}}>
                     <li className='sponsor-item'>
-                        <a href='https://rockforareason.org/' className='logo-sponsor-item' onClick={closeMobileMenu}>
-                            <img classname='partner-logo'src='../images/rockfar.png' alt='rfar' />
-                        </a>
+                        <Link href='https://rockforareason.org/' className='logo-sponsor-item' onClick={closeMobileMenu}>
+                            <a><Image classname='partner-logo'src='/images/rockfar.png' alt='rfar'  height="70px" width="70px"/></a>
+                        </Link>
                     </li>
                     <li className='sponsor-item'>
-                        <a href='/bigbear' className='logo-sponsor-item' onClick={closeMobileMenu}>
-                            <img classname='partner-logo'src='./images/thumbnail.png' alt='bigbear' />
-                        </a>
+                        <Link  href='/bigbear' className='logo-sponsor-item' onClick={closeMobileMenu}>
+                        <a><Image classname='partner-logo'  src='/images/thumbnail.png' alt='bigbear'  height="70px" width="70px" /></a>
+                        </Link>
                     </li>
                     <li className='sponsor-item'>
-                        <a href='https://www.southernproperlinen.com/' className='logo-sponsor-item' onClick={closeMobileMenu}>
-                            <img classname='partner-logo'src='./images/southern.png' alt='soutehernproper' />
-                        </a>
+                        <Link href='https://www.southernproperlinen.com/' className='logo-sponsor-item' onClick={closeMobileMenu}>
+                            <a><Image classname='partner-logo'src='/images/southern.png' alt='soutehernproper'  height="70px" width="100px" /></a>
+                        </Link>
                     </li>
                 </ul>
                     
@@ -58,8 +59,8 @@ function Navbar() {
                 
                 <div className='lower-nav'>
 
-                <Link className = "navbar-container-logo" id='logo' href='/'>
-                    <img src = "./images/transparentlogo.png" style={{blockSize: "150px"}} alt = "Logo"/>
+                <Link className = "navbar-container-logo"  style={{display:'inline-block', justifyContent: 'center', alignItems:'centr', height: 'auto', maxWidth: '1500px', textAlign: 'center'}}id='logo' href='/'>
+                    <Image src = "/images/transparentlogo.png" height="200px" width="300px" alt = "Logo"/>
                 </Link>
 
                 <div className = "navbar-container" >
@@ -68,56 +69,56 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <a href='/' className='nav-links' onClick={closeMobileMenu}>
-                                HOME
-                            </a>
+                            <Link href='/' className='nav-links' onClick={closeMobileMenu}>
+                                <a>HOME</a>
+                            </Link>
                         </li>
                         <li className='nav-item'>
-                            <a
+                            <Link
                             href='/services'
                             className='nav-links'
                             onClick={closeMobileMenu}
                             >
-                                SERVICES
-                            </a>
+                                <a>SERVICES</a>
+                            </Link>
                         </li>
                         <li className='nav-item'>
-                            <a 
+                            <Link 
                             href='/VIP' 
                             className='nav-links'  
                             onClick={closeMobileMenu}
                             >
-                                V.I.P.
-                            </a>
+                               <a> V.I.P. </a>
+                            </Link>
                         </li>
                         <li
                         className='nav-item'
                         onMouseEnter={onMouseEnter}
                         onMouseLeave={onMouseLeave}
                         >
-                            <a
+                            <Link
                             href='/about'
                             className='nav-links'
                             onClick={closeMobileMenu}
                             >
-                                ABOUT <i className='fas fa-caret-down' />
-                            </a>
+                                <a>ABOUT <i className='fas fa-caret-down' /></a>
+                            </Link>
                             {dropdown && <Dropdown />}
                         </li>
                         <li className='nav-item'>
-                            <a href='/contact' className='nav-links' onClick={closeMobileMenu}>
-                                CONTACT
-                            </a>
+                            <Link href='/contact' className='nav-links' onClick={closeMobileMenu}>
+                                <a>CONTACT</a>
+                            </Link>
                         </li>
                         <li className='nav-item1'>
-                            <a href='/faq' className='nav-links' onClick={closeMobileMenu}>
-                                FAQ
-                            </a>
+                            <Link href='/faq' className='nav-links' onClick={closeMobileMenu}>
+                               <a>FAQ</a>
+                            </Link>
                         </li>
                         <li className='nav-item1'>
-                            <a href='/employment' className='nav-links' onClick={closeMobileMenu}>
-                                Employment
-                            </a>
+                            <Link href='/employment' className='nav-links' onClick={closeMobileMenu}>
+                                <a>Employment</a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -164,6 +165,11 @@ function Navbar() {
                     height: 80px;
                     width: 100%;
                   }
+                  @media screen and (max-width: 769px){
+                    .navbar-container{
+                      width:0%;
+                    }
+                  }
                   .navbar-container-logo {
                     display:inline-block;
                     justify-content: center;
@@ -188,7 +194,9 @@ function Navbar() {
                     margin-left: 0.5rem;
                     font-size: 1.8rem;
                   }
-                  
+                  a{
+                    color: #00338e;
+                  }
                   .nav-menu {
                     display: inline-flex;
                     grid-template-columns: repeat(4, auto);

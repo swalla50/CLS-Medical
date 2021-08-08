@@ -3,6 +3,7 @@ import {Button} from '../components/Button.js';
 import Link from 'next/link';
 import '../styles/Footer.module.css';
 import emailjs from 'emailjs-com';
+import Image from 'next/image'
 
 function sendEmail(e){
   e.preventDefault();
@@ -52,49 +53,55 @@ function Footer() {
         <div className='footer-links'>
           <div className='footer-link-wrapper'>
             <div className='footer-link-items' >
-              <a className='product-link' href='/services'>
+              <Link className='product-link' href='/services'>
                 <h2 style={{color:'white'}}>Our Products</h2>
-              </a>
+              </Link>
             </div>
           </div>
           <div className='footer-link-wrapper'>
             <div className='footer-link-items'>
               <h2>Social Media</h2>
-              <a href='https://www.facebook.com/clsmedical/'>CLS Facebook</a>
-              <a href='https://www.linkedin.com/company/clsmedical/mycompany/?viewAsMember=true'>CLS Linkedin</a>
-              <a href='https://www.facebook.com/RockForAReasonATL'>Rock Facebook</a>
-              <a href='https://www.facebook.com/SPLinens'>Southern Proper Facebook</a>
-              <a href='https://www.linkedin.com/company/southernproperlinen/?viewAsMember=true'>Southern Proper Linkedin</a>
+              <Link href='https://www.facebook.com/clsmedical/'>CLS Facebook</Link>
+              <Link href='https://www.linkedin.com/company/clsmedical/mycompany/?viewAsMember=true'>CLS Linkedin</Link>
+              <Link href='https://www.facebook.com/RockForAReasonATL'>Rock Facebook</Link>
+              <Link href='https://www.facebook.com/SPLinens'>Southern Proper Facebook</Link>
+              <Link href='https://www.linkedin.com/company/southernproperlinen/?viewAsMember=true'>Southern Proper Linkedin</Link>
             </div>
           </div>
         </div>
         <section className='social-media'>
           <div className='social-media-wrap'>
             <div className='footer-logo'>
-              <a href='/' className='social-logo'>
-                <img src = "/images/transparentlogo.png" alt='cls-footer-logo'/>
-              </a>
+              <Link href='/' className='social-logo'>
+                <Image src = "/images/transparentlogo.png" alt='cls-footer-logo' height='100px' width='200px'/>
+              </Link>
             </div>
             <small className='website-rights'>CLS Medical © 2021</small>
             <div className='social-icons'>
-              <a
+              <Link
                 href= 'https://www.facebook.com/clsmedical/'
                 className='social-icon-link facebook'
                 to='/'
                 target='_blank'
+                rel="noreferrer"
                 aria-label='Facebook'
               >
-                <i className='fab fa-facebook-f' />
-              </a>
-              <a
+                <a style={{paddingInline:'5px'}}>
+                  <i className='fab fa-facebook-f'/>
+                </a>
+              </Link>
+              <Link
                 href= 'https://www.linkedin.com/company/clsmedical/mycompany/?viewAsMember=true'
-                class='social-icon-link facebook'
+                className='social-icon-link linkedin'
                 to='/'
                 target='_blank'
+                rel="noreferrer"
                 aria-label='Facebook'
               >
-                <i className='fab fa-linkedin-in' />
-              </a>
+                <a style={{paddingInline:'5px'}}>
+                  <i className='fab fa-linkedin-in' />
+                </a>
+              </Link>
               
             </div>
           </div>

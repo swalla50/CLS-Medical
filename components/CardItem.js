@@ -1,7 +1,7 @@
 import React from 'react';
 import { Fragment } from 'react';
 import '../styles/CardItem.module.css'
-
+import Image from 'next/image'
 
 function CardItem(props) {
     return (
@@ -9,11 +9,16 @@ function CardItem(props) {
             <li className='cards__item' style={{animation:'float 5s ease-in-out infinite'}}>
                 <a className='cards__item__link'>
                     <figure className='cards__item__pic-wrap' data-category={props.label}>
-                        <img 
+                        <div className='card-image-container' >
+                        <Image 
                         src={props.src} 
                         alt='Travel' 
-                        className='cards__item__img' 
+                        className='cards__item__img'
+                        layout='responsive'
+                        height='200px'
+                        width='200px'
                         />
+                        </div>
                     </figure>
                     <div className='cards__item__info'>
                         <h5 className='cards__item__text'>{props.text}</h5>
@@ -82,7 +87,7 @@ function CardItem(props) {
                         .cards__item__pic-wrap {
                             position: relative;
                             width: 100%;
-                            padding-top: 67%;
+                            padding-top: 10%;
                             overflow: hidden;
                         }
                         

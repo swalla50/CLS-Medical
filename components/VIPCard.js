@@ -22,7 +22,6 @@ export default function VIPCard() {
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
-          height="140"
           image='./images/rockfar.png'
           title="Contemplative Reptile"
           height='300px'
