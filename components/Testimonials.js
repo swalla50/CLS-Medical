@@ -16,7 +16,7 @@ export default class Testimonials extends Component {
         interval={6100}
       >
         <div className='Testimonials'>
-          <Image src="/images/userdefault.png" alt='user-default' layout='responsive' height='100px' width='100px' />
+          <Image src="/images/userdefault.png" alt='user-default'  height='100px' width='100px' />
           <div className="myCarousel">
             <h3>R. Nevarez</h3>
             <h4>Halcyon Hospice</h4>
@@ -27,7 +27,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div>
-          <Image src="/images/userdefault.png" alt='user-defualt' layout='responsive' height='100px' width='100px' />
+          <Image src="/images/userdefault.png" alt='user-defualt'  height='100px' width='100px' />
           <div className="myCarousel">
             <h3>Jane and Stephanie</h3>
             <h4>Roswell Surgery Center</h4>
@@ -41,7 +41,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div>
-          <Image src="/images/userdefault.png" alt='user-defualt'layout='responsive' height='100px' width='100px' />
+          <Image src="/images/userdefault.png" className={'userdefault'} alt='user-defualt' height='100px' width='100px' />
           <div className="myCarousel">
             <h3>N. Thompson</h3>
             <h4>West Georgia Center for Plastic Surgery</h4>

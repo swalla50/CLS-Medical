@@ -111,12 +111,10 @@ function Footer() {
                    .footer-container{
                     background-color: #6685bb
                     ;
-                    padding: 4rem 0 2rem 0;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-self: center;
-                    padding-top:9px;
                 }
                 
                 .footer-subscription {
@@ -125,9 +123,6 @@ function Footer() {
                     justify-content: center;
                     align-items: center;
                     text-align: center;
-                  
-                    margin-bottom: 24px;
-                    padding: 24px;
                     color: #fff;
                   }
                   

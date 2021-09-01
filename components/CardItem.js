@@ -9,15 +9,15 @@ function CardItem(props) {
             <li className='cards__item' style={{animation:'float 5s ease-in-out infinite'}}>
                 <a className='cards__item__link'>
                     <figure className='cards__item__pic-wrap' data-category={props.label}>
-                        <div className='card-image-container' >
-                        <Image 
-                        src={props.src} 
-                        alt='Travel' 
-                        className='cards__item__img'
-                        layout='responsive'
-                        height='200px'
-                        width='200px'
-                        />
+                        <div className='card-image-container' style={{paddingLeft:'30%', paddingRight:'30%', paddingBottom:'20%'}} >
+                            <Image 
+                            src={props.src} 
+                            alt='services-card' 
+                            className='cards__item__img'
+                            layout='responsive'
+                            height='50px'
+                            width='50px'
+                            />
                         </div>
                     </figure>
                     <div className='cards__item__info'>
@@ -125,7 +125,7 @@ function CardItem(props) {
                             object-fit: scale-down;
                             transition: all 0.2s linear;
                         }
-                        
+
                         .cards__item__img:hover {
                             transform: scale(1.1);
                         }

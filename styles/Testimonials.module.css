@@ -14,7 +14,7 @@
   }
   
   .carousel .slide img {
-    width: 139px !important;
+    
     border-radius: 50%;
   }
   
@@ -129,7 +129,7 @@
     }
   
     .carousel .slide img {
-      width: 24% !important;
+      
       border-radius: 50%;
       
     }

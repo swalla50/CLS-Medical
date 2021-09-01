@@ -39,6 +39,13 @@ function FAQ (){
                     <FAQAccordion />
 
             </div>
+            <style jsx>
+        {`
+          .row2{
+              padding-bottom: 10%;
+          }
+        `}
+      </style>
             
         </Fragment>
     ); 

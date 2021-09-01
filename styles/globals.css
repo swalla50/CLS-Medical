@@ -5,6 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     overflow-x: hidden;
+  
 }
 
 a {
@@ -64,9 +65,7 @@ a {
   transition: color 0.3s;
   -webkit-text-decoration-skip: objects;
 }
-.navbar > a{
-  color: #00338e;
-}
+
 p {
   display: block;
   margin-block-start: 1em;
@@ -327,13 +326,14 @@ input#PhoneNumber {
   height: 200px;
   background-repeat: no-repeat;
   color: #fff;
-  font-size: 70px;
-  vertical-align: middle;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
   
 }
 
 .faq-header{
-  font-size: 50px;
+  font-size: 100px;
   display: inline-flex;
   color:#fff;
 }
@@ -367,9 +367,9 @@ input#PhoneNumber {
   height: 200px;
   background-repeat: no-repeat;
   color: #fff;
-  font-size: 70px;
-  vertical-align: middle;
-  
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 .row1{
   display: contents;
@@ -539,7 +539,7 @@ input#PhoneNumber {
   padding-left: 5%;
   padding-right: 5%;
   border: 1px solid #ddd;
-  height: 286px;
+  height: 400px;
 }
 
 .carousel .control-dots {
@@ -565,6 +565,55 @@ input#PhoneNumber {
   font-weight: 500;
   color: #787878;
   font-size: 14px;
+}
+img.ONElogo {
+  border-radius: 20px;
+}
+
+#service-top{
+  border-radius:20px;
+}
+
+#service-bottom{
+  border-radius:20px;
+}
+.one-logo{
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+.one-content-background{
+  animation: fadeIn 4s;
+  -webkit-animation: fadeIn 4s;
+  -moz-animation: fadeIn 4s;
+  -o-animation: fadeIn 4s;
+  -ms-animation: fadeIn 4s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
 .myCarousel p {
@@ -635,11 +684,11 @@ input#PhoneNumber {
     padding-left: 5%;
     padding-right: 5%;
     border: 1px solid #ddd;
-    height: 269px;
+    height: 400px;
   }
 
   .carousel .slide img {
-    width: 24% !important;
+    
     border-radius: 50%;
     
   }
@@ -660,7 +709,8 @@ input#PhoneNumber {
   top: 0;
   z-index: 999;
   box-shadow: 1px 7px 22px 4px #5B5B5B;;
-  width: 100%
+  width: 100%;
+  
 }
 
 .uppernav{
@@ -715,6 +765,11 @@ input#PhoneNumber {
   margin-left: 0.5rem;
   font-size: 1.8rem;
 }
+
+.card-image-container:hover {
+  transform: scale(1.1);
+}
+
 
 .navmenu {
   display: inline-flex;
@@ -787,6 +842,9 @@ input#PhoneNumber {
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+  }
+  .navbar.active{
+    display: inline;
   }
 
   .navlinks {
@@ -922,6 +980,7 @@ box-sizing: border-box;
 .btn--large {
   padding: 12px 26px;
   font-size: 20px;
+  margin: 5px;
 }
 
 .btn--large:hover,
@@ -934,6 +993,7 @@ box-sizing: border-box;
 
 .hero-btns{
     z-index: 2;
+    display: inline-flex;
 }
 
 .hero-container {
@@ -968,6 +1028,8 @@ box-sizing: border-box;
   font-size: 32px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+
 
 @media screen and (max-width: 960px){
   .hero-container > h1{

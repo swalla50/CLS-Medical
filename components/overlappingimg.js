@@ -7,10 +7,10 @@ function Overlappingimg() {
         <div className='container'>
                 <div className="image-stack">
                     <div className="image-stack__item image-stack__item--top">
-                        <Image src="/images/services-medical.jpg" alt="folded-arms" width='800px' height='500px'/>
+                        <Image src="/images/services-medical.jpg" id='service-top' alt="folded-arms" width='800px' height='500px'/>
                     </div>
                     <div className="image-stack__item image-stack__item--bottom">
-                        <Image src="/images/services-military.jpg" alt="military" width='800px' height='500px'/>
+                        <Image src="/images/services-military.jpg" alt="military" id='service-bottom' width='800px' height='500px'/>
                     </div>
                     
                 </div>
@@ -45,13 +45,6 @@ function Overlappingimg() {
                             grid-column: 1 / span 8;
                             padding-top: 45%; 
                             z-index: 1; 
-                        }
-                        
-                        .image-stack__item > img {
-                            width: 100%;
-                            display: block;
-                            border-radius: 30px;
-                            box-shadow: 0 38px 20px rgb(0 0 0 / 13%);
                         }
                         `}
                     </style>

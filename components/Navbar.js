@@ -1,17 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Dropdown from '../components/Dropdown';
+import Dropdown2 from './Dopdown2';
 import { Fragment } from 'react';
 import Image from 'next/image'
+
 
 function Navbar() {
     const [click, setClick] = useState(false);
     const [dropdown, setDropdown] = useState(false);
-
+    const [dropdown2, setDropdown2] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-    
 
     const onMouseEnter = () => {
         if (window.innerWidth < 960) {
@@ -29,11 +30,46 @@ function Navbar() {
         }
       };
 
+      const onMouseEnter2 = () => {
+        if (window.innerWidth < 960) {
+          setDropdown2(false);
+        } else {
+          setDropdown2(true);
+        }
+      };
     
+      const onMouseLeave2 = () => {
+        if (window.innerWidth < 960) {
+          setDropdown2(false);
+        } else {
+          setDropdown2(false);
+        }
+      };
+
+      const [scrollY, setScrollY] = useState(0);
+      useEffect(() => {
+        const handleScroll = () => {
+          setScrollY(window.scrollY);
+        };
+    
+        // just trigger this so that the initial state 
+        // is updated as soon as the component is mounted
+        // related: https://stackoverflow.com/a/63408216
+        handleScroll();
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+    
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, []);
     
     return (
+      
         <Fragment>
-            <nav className= "navbar" id= 'navbar'>
+            <nav className={scrollY > 20 ? "navbar active" : "navbar"} id= 'navbar'>
+              
                 <ul className='sponsor-list' style={{listStyleType:'none', display:'inline-flex',marginTop:'20px' ,justifyContent:'center'}}>
                     <li className='sponsor-item'>
                         <Link href='https://rockforareason.org/' className='logo-sponsor-item' onClick={closeMobileMenu}>
@@ -52,15 +88,15 @@ function Navbar() {
                     </li>
                 </ul>
                     
-                <div className='upper-nav1'>
+                <div className={scrollY > 20 ? "upper-nav1 active" : "upper-nav1"}>
                 </div>
-                <div className='upper-nav2'>
+                <div className={scrollY > 20 ? "upper-nav2 active" : "upper-nav2"}>
                 </div>
                 
                 <div className='lower-nav'>
 
-                <Link className = "navbar-container-logo"  style={{display:'inline-block', justifyContent: 'center', alignItems:'centr', height: 'auto', maxWidth: '1500px', textAlign: 'center'}}id='logo' href='/'>
-                    <Image src = "/images/transparentlogo.png" height="200px" width="300px" alt = "Logo"/>
+                <Link className = "navbar-container-logo"  style={{display:'inline-block', justifyContent: 'center', alignItems:'center', height: 'auto', maxWidth: '1500px', textAlign: 'center'}}id='logo' href='/'>
+                    <Image src = "/images/transparentlogo.png" height="50px" width="150px" alt = "Logo"/>
                 </Link>
 
                 <div className = "navbar-container" >
@@ -82,14 +118,19 @@ function Navbar() {
                                 <a>SERVICES</a>
                             </Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link 
-                            href='/VIP' 
-                            className='nav-links'  
+                        <li
+                        className='nav-item'
+                        onMouseEnter={onMouseEnter2}
+                        onMouseLeave={onMouseLeave2}
+                        >
+                            <Link
+                            href='/VIP'
+                            className='nav-links'
                             onClick={closeMobileMenu}
                             >
-                               <a> V.I.P. </a>
+                                <a>PROGRAMS <i className="fas fa-plus" style={{height:'15px'}}/></a>
                             </Link>
+                            {dropdown2 && <Dropdown2 />}
                         </li>
                         <li
                         className='nav-item'
@@ -101,7 +142,7 @@ function Navbar() {
                             className='nav-links'
                             onClick={closeMobileMenu}
                             >
-                                <a>ABOUT <i className='fas fa-caret-down' /></a>
+                                <a>ABOUT <i className="fas fa-plus" style={{height:'15px'}}/></a>
                             </Link>
                             {dropdown && <Dropdown />}
                         </li>
@@ -111,19 +152,50 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item1'>
-                            <Link href='/faq' className='nav-links' onClick={closeMobileMenu}>
-                               <a>FAQ</a>
+                            <Link href='/' className='nav-links' >
+                               <a onClick={closeMobileMenu}>HOME</a>
                             </Link>
                         </li>
                         <li className='nav-item1'>
-                            <Link href='/employment' className='nav-links' onClick={closeMobileMenu}>
-                                <a>Employment</a>
+                            <Link href='/services' className='nav-links'>
+                               <a onClick={closeMobileMenu}>SERIVICES</a>
+                            </Link>
+                        </li>
+                        <li className='nav-item1'>
+                            <Link href='/VIP' className='nav-links'>
+                               <a onClick={closeMobileMenu}>V.I.P.</a>
+                            </Link>
+                        </li>
+                        <li className='nav-item1'>
+                            <Link href='/one' className='nav-links'>
+                               <a onClick={closeMobileMenu}>O.N.E.</a>
+                            </Link>
+                        </li>
+                         <li className='nav-item1'>
+                            <Link href='/about' className='nav-links'>
+                               <a onClick={closeMobileMenu}>THE TEAM</a>
+                            </Link>
+                        </li>
+                        <li className='nav-item1'>
+                            <Link href='/faq' className='nav-links'>
+                               <a onClick={closeMobileMenu}>FAQ</a>
+                            </Link>
+                        </li>
+                        <li className='nav-item1'>
+                            <Link href='/employment' className='nav-links'>
+                                <a onClick={closeMobileMenu}>Employment</a>
+                            </Link>
+                        </li>
+                        <li className='nav-item1'>
+                            <Link href='/contact' className='nav-links'>
+                                <a onClick={closeMobileMenu}>CONTACT</a>
                             </Link>
                         </li>
                     </ul>
                 </div>
                 </div>
                 <style jsx>{`
+
                 .navbar {
                     background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
                     height: auto;
@@ -137,6 +209,18 @@ function Navbar() {
                     box-shadow: 1px 7px 22px 4px #5B5B5B;;
                     width: 100%
                   }
+
+                  .navbar.active{
+                    display: inline-flex;
+                  }
+
+                  .upper-nav1.active{
+                    display: none;
+                  }
+                  .upper-nav2.active{
+                    display: none;
+                  }
+                  
                   .upper-nav{
                     display: inline-flex;
                     place-content: center;
@@ -165,7 +249,7 @@ function Navbar() {
                     height: 80px;
                     width: 100%;
                   }
-                  @media screen and (max-width: 769px){
+                  @media screen and (max-width: 960px){
                     .navbar-container{
                       width:0%;
                     }
@@ -196,6 +280,7 @@ function Navbar() {
                   }
                   a{
                     color: #00338e;
+                    padding:15px;
                   }
                   .nav-menu {
                     display: inline-flex;
@@ -214,9 +299,19 @@ function Navbar() {
                     font-size: 25px;
                     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
                   }
-                  .navitem1 {
-                    height: 50px;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                  @media screen and (min-width: 960px){
+                  .nav-item1 {
+                    display: hidden;
+                    }
+                }
+                @media screen and (max-width: 960px){
+                    .nav-item1 {
+                      font-size:25px;
+                      height: 0px;
+                      }
+                    .nav-item {
+                        display: none;
+                    }
                   }
                   .nav-links {
                     color: #00338e;
@@ -262,6 +357,8 @@ function Navbar() {
                       left: -100%;
                       opacity: 1;
                       transition: all 0.5s ease;
+                      padding-top:20%;
+                      padding-bottom:20%;
                     }
                   
                     .nav-menu.active {
@@ -270,6 +367,7 @@ function Navbar() {
                       opacity: 1;
                       transition: all 0.5s ease;
                       z-index: 1;
+
                     }
                   
                     .nav-links {

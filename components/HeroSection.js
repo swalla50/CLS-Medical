@@ -22,7 +22,7 @@ function HeroSection() {
                     <Button className='btns'
                     buttonStyle='btn--primary'
                     buttonSize='btn--large'>
-                        CONTACT US <i className= 'far fa-play-cirle'/>
+                        CONTACT US 
                     </Button>
                     
                 </Link>
