@@ -7,8 +7,8 @@ nodemailer.createTransport({
     host: "smtp.gmail.com", //replace with your email provider
     port: 587,
     auth: {
-      user: , //replace with the email address
-      pass:  //replace with the password
+      user: hshhdfs, //replace with the email address
+      pass:dsfadsfsda  //replace with the password
     }
   });
 
