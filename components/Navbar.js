@@ -69,7 +69,9 @@ function Navbar() {
       
         <Fragment>
             <nav className={scrollY > 20 ? "navbar active" : "navbar"} id= 'navbar'>
-              
+            <div className='menu-icon' onClick={handleClick}>
+                        <i className= {click ? 'fas fa-times' : 'fas fa-bars'}/>
+            </div>
                 <ul className='sponsor-list' style={{listStyleType:'none', display:'inline-flex',marginTop:'20px' ,justifyContent:'center'}}>
                     <li className='sponsor-item'>
                         <Link href='https://rockforareason.org/' className='logo-sponsor-item' onClick={closeMobileMenu}>
@@ -100,9 +102,6 @@ function Navbar() {
                 </Link>
 
                 <div className = "navbar-container" >
-                    <div className='menu-icon' onClick={handleClick}>
-                        <i className= {click ? 'fas fa-times':'fas fa-bars'}/>
-                    </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link href='/' className='nav-links' onClick={closeMobileMenu}>

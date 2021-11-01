@@ -72,15 +72,6 @@ export default function AdminList() {
                     <AccountCircleIcon style={{color:"#00338e" }} />
                   </ListItemIcon>
                   <ListItemText
-                    primary="Polina Planova Chief Marketing Officer | planovapolina.cls@gmail.com"
-                    secondary={secondary ? 'Secondary text' : null}
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <AccountCircleIcon style={{color:"#00338e" }} />
-                  </ListItemIcon>
-                  <ListItemText
                     primary="Tanner Freeman - Medical Director | tfreeman.cls@gmail.com"
                     secondary={secondary ? 'Secondary text' : null}
                   />

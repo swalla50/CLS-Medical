@@ -169,6 +169,11 @@ function Cards() {
                         margin-bottom: 2rem;
                         }
                     }
+                    @media only screen and (max-width: 960px){
+                        .cards {
+                            padding: 1rem;
+                        }
+                    }
                     `}
                 </style>
         </div>
