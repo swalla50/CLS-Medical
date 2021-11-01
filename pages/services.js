@@ -62,7 +62,12 @@ function Services() {
                     padding-inline: 15%;
                     padding-bottom: 30px;
                     }
-                   
+                    @media  screen and (max-width: 477px) {
+                        .tab-container{
+                            padding-inline:1%;
+                        }
+                        
+                    }
                     
 
                     body {

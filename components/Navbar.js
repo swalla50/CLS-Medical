@@ -253,6 +253,9 @@ function Navbar() {
                     .navbar-container{
                       width:0%;
                     }
+                    .lower-nav{
+                      place-self: center;
+                    }
                   }
                   .navbar-container-logo {
                     display:inline-block;
