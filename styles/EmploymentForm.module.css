@@ -2,3 +2,7 @@
     background-color: transparent;
 }
 
+input#resumeFile {
+    border-radius: 20px;
+}
+

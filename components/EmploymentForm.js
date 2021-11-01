@@ -23,7 +23,7 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
     <Card>
         <CardContent style={{paddingBottom:'55px'}}>
             <div className= 'contact-form-container' style={{paddingInline:'5%'}}>
-                <form id='form-contact' onSubmit={sendEmail} style={{background: '#d6ffff', borderRadius:'20px', padding:'10px', boxShadow: '0 32px 20px rgb(0 0 0 / 26%)'}}>
+                <form id='form-contact' onSubmit={sendEmail} style={{background: 'white', borderRadius:'20px', padding:'10px', boxShadow: '0 32px 20px rgb(0 0 0 / 26%)'}}>
                     <div className='form-group'>
                         <div className= 'contactrow'>
                             <h2>Online Job Application</h2>
@@ -252,8 +252,8 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
 
                             <div className='upload'style={{}}>
                                 <p>Upload Resume:</p><t></t>
-                                <div className='resume' style={{paddingInline:'10px'}}>
-                                    <input type="file" id="resumeFile" name="filename" style={{ border: 'solid rgb(102, 133, 187)'}} />
+                                <div className='resume' style={{paddingInline:'10px', borderRadius:"20px"}}>
+                                    <input type="file" id="resumeFile" name="filename" style={{ border: 'solid rgb(102, 133, 187)', borderRadius:"20px", cursor:"pointer"}} />
                                 </div>
                             </div><br></br>
                             
