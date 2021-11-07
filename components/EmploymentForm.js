@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import emailjs from 'emailjs-com';
 import { Divider } from '@material-ui/core';
 import '../styles/EmploymentForm.module.css';
+import { SettingsSharp } from '@material-ui/icons';
 
 function sendEmail(e){
     e.preventDefault();
@@ -19,6 +20,35 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
 
  export default function EmploymentForm(){
 
+
+    const [email, setEmail] = useState("");
+    const [ss, setSS] = useState("");
+    const [dob, setDOB] = useState("");
+    const [city, setCity] = useState("");
+    const [state,setState] = useState("");
+    const [zip, setZip] = useState("");
+    const [address, setAddress] = useState("");
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(email, username, phone, subject, message);
+        // clearing the values
+        setEmail("");
+        setName("");
+        setPhone("");
+        setSubject("");
+        setMessage("");
+        setCity("");
+        setState("");
+        setZip("");
+        setAddress("");
+        setDOB("");
+        setSS("");
+        SettingsSharp("");
+    }
     return(
     <Card>
         <CardContent style={{paddingBottom:'55px'}}>
@@ -28,39 +58,39 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                         <div className= 'contactrow'>
                             <h2>Online Job Application</h2>
                             <div className='col-md-6' style={{paddingBottom:'3%'}}>
-                                <input placeholder='Name' id ='name' type='text' className='form-control' name='name'
+                                <input placeholder='Name' onChange={(e) => setName(e.target.value)} id ='name' type='text' className='form-control' name='name' value = {name}
                                 style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb', padding:'0px'}} />
                             </div>
-                            <div className='form-group' style={{paddingBottom:'3%'}}>
-                                <input placeholder='Street Address' id ='address' type='text' className='form-control' name='address'
+                            <div className='form-group' onChange={(e) => setAddress(e.target.value)} style={{paddingBottom:'3%'}}>
+                                <input placeholder='Street Address' id ='address' type='text' className='form-control' name='address' value ={address}
                                 style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb', width:'50%'}} />
                             </div>
                             <div className='address-group'>
                                 <div className='form-group' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='City' id ='city' type='text' className='form-control' rows='1' name='city'
+                                    <input placeholder='City'onChange={(e) => setCity(e.target.value)} id ='city' type='text' className='form-control' rows='1' name='city' value={city}
                                     style={{padding:'0px',borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                                 <div className='col-md-6' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='State' id ='state' type='text' className='form-control' name='state'
+                                    <input placeholder='State'onChange={(e) => setState(e.target.value)} onChange={(e) => setState(e.target.value)} id ='state' type='text' className='form-control' name='state' value = {state}
                                     aria-describedby='emailHelp'   style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                                 <div className='col-md-6' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='Zip Code' id ='zip' type='text' className='form-control' name='zip'
+                                    <input placeholder='Zip Code' onChange={(e) => setZip(e.target.value)} id ='zip' type='text' className='form-control' name='zip' value = {zip}
                                     aria-describedby='emailHelp'   style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                             </div>
                         
                             <div className='address-group'>
                                 <div className='form-group' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='Email' id ='email' type='email' className='form-control' rows='1' name='email'
+                                    <input placeholder='Email' onChange={(e) => setEmail(e.target.value)} id ='email' type='email' className='form-control' rows='1' name='email' value = {email}
                                     style={{padding:'0px',borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                                 <div className='col-md-6' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='Date of Birth' id ='dob' type='text' className='form-control' name='dob'
+                                    <input placeholder='Date of Birth' onChange={(e) => setDOB(e.target.value)} id ='dob' type='text' className='form-control' name='dob' value = {dob}
                                     style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                                 <div className='col-md-6' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='Social Security' id ='zip' type='text' className='form-control' name='ss'
+                                    <input placeholder='Social Security' onChange={(e) => setSS(e.target.value)} id ='zip' type='text' className='form-control' name='ss' value = {ss}
                                     style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                             </div>
@@ -69,7 +99,7 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                             <div className='education-group1'style={{display:'inline-flex'}}>
                                 <p>Highest Level of Education:</p><t></t>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" id="education1" name="education1" value="High School" />
+                                    <input type="checkbox" onChange={(e) => setED1(e.target.value)} id="education1" name="education1" value="High School" value={eductation1} />
                                     <label htmlFor="education1">High School</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
@@ -258,7 +288,7 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                             </div><br></br>
                             
                             <div className='button-row' style={{width:'100%', textAlign:'center', paddingTop:'20px'}}>
-                                <Button variant='outlined' type= 'submit' className='primary-btn submit' style={{width:'fit-content', fontSize:'large', border:'2px solid #dc0000',color: '#dc0000'}}>Submit</Button>
+                                <Button variant='outlined' onClick={handleSubmit} type= 'submit' className='primary-btn submit' style={{width:'fit-content', fontSize:'large', border:'2px solid #dc0000',color: '#dc0000'}}>Submit</Button>
                             </div>
                         </div>
                     </div>
