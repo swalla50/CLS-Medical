@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Button} from '../components/Button.js';
 import Link from 'next/link';
 import '../styles/Footer.module.css';
@@ -8,7 +8,7 @@ import Image from 'next/image'
 function sendEmail(e){
   e.preventDefault();
 
-emailjs.sendForm('service_r9b69jg', 'template_ocb89za', e.target, 'user_OIuQ0ZFNNH6wSdbZCzQet')
+emailjs.sendForm('service_ihoqsha', 'template_ocb89za', e.target, 'user_OIuQ0ZFNNH6wSdbZCzQet')
 .then((result) => {
     console.log(result.text);
 }, (error) => {
@@ -17,6 +17,22 @@ emailjs.sendForm('service_r9b69jg', 'template_ocb89za', e.target, 'user_OIuQ0ZFN
 }
 
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [username, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  function handleSubmit(e) {
+      e.preventDefault();
+      console.log(email, username, phone, subject, message);
+      // clearing the values
+      setEmail("");
+      setName("");
+      setPhone("");
+      setSubject("");
+      setMessage("");
+  }
+
     return (
       <div className='footer-container'>
         <section className='footer-subscription'>

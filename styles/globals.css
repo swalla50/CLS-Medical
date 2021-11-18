@@ -371,6 +371,12 @@ input#PhoneNumber {
   font-weight: bold;
   text-align: center;
 }
+
+@media screen and (max-width:960px) {
+  .employment{
+    font-size: 50px;
+  }
+}
 .row1{
   display: contents;
   height:350px;
@@ -1034,14 +1040,14 @@ box-sizing: border-box;
 @media screen and (max-width: 960px){
   .hero-container > h1{
       font-size: 70px;
-      margin-top: -150px;
+      margin-top: 10%;
   }
 }
 
 @media screen and (max-width:768px){
   .hero-container > h1 {
       font-size: 30px;
-      margin-top: -100px;
+      margin-top: 10%;
   }
 
   .hero-container > p{
@@ -1065,4 +1071,44 @@ box-sizing: border-box;
   padding-left: 15px;
 }
 
+
+@media screen and (max-width:1300px){
+  .one-logo{
+      width: 100%;
+      text-align: center;
+  }
+  h2.one-page-title {
+      font-size: 50px;
+  }
+  .one-background{
+      padding: 5%;
+  }
+  .one-row{
+      padding: 5%;
+      align-items: center;
+      flex-direction: column;
+  }
+  .one-content-background{
+      width: 100%;
+  }
+} 
+
+@media screen and (min-width:1301px){
+  .one-logo{
+      width: 50%;
+  }
+  h2.one-page-title {
+      font-size: 90px;
+  }
+  .one-background{
+      padding: 100px;
+  }
+  .one-row{
+      padding: 100px;
+      
+  }
+  .one-content-background{
+      width: 50%;
+  }
+} 
 /*Nav bar shrinking*/

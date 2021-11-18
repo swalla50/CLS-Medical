@@ -10,7 +10,7 @@ import {useState} from 'react';
     function sendEmail(e){
         e.preventDefault();
 
-    emailjs.sendForm('service_r9b69jg', 'template_ocb89za', e.target, 'user_OIuQ0ZFNNH6wSdbZCzQet')
+    emailjs.sendForm('service_ihoqsha', 'template_ocb89za', e.target, 'user_OIuQ0ZFNNH6wSdbZCzQet')
       .then((result) => {
           console.log(result.text);
       }, (error) => {

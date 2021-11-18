@@ -1,0 +1,20 @@
+
+@media screen and (max-width:400px){
+    .one-logo{
+        width: 100%;
+    }
+    h2.one-page-title {
+        font-size: 50px;
+    }
+    .one-background{
+        padding: 5%;
+    }
+    .one-row{
+        padding: 5%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .one-content-background{
+        width: 100%;
+    }
+  } 
