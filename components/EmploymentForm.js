@@ -111,7 +111,7 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                                     style={{padding:'0px',borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                                 <div className='col-md-6' style={{paddingBottom:'3%'}}>
-                                    <input placeholder='State'onChange={(e) => setState(e.target.value)} onChange={(e) => setState(e.target.value)} id ='state' type='text' className='form-control' name='state' value = {state}
+                                    <input placeholder='State' onChange={(e) => setState(e.target.value)} id ='state' type='text' className='form-control' name='state' value = {state}
                                     aria-describedby='emailHelp'   style={{borderLeft:'none',borderRight:'none', borderTop: 'none', borderBottom:'solid #6685bb'}} />
                                 </div>
                                 <div className='col-md-6' style={{paddingBottom:'3%'}}>
@@ -139,15 +139,15 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                             <div className='education-group1'style={{display:'inline-flex'}}>
                                 <p>Highest Level of Education:</p><t></t>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" onChange={(e) => setED1(e.target.value)} id="education1" name="education1" value="High School" value={ED1} />
+                                    <input type="checkbox" onChange={(e) => setED1(e.target.value)} id="education1" name="education1" value={ED1} />
                                     <label htmlFor="education1">High School</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" onChange={(e) => setED2(e.target.value)} id="education2" name="eductation2" value="College" value={ED2}/>
+                                    <input type="checkbox" onChange={(e) => setED2(e.target.value)} id="education2" name="eductation2"  value={ED2}/>
                                     <label htmlFor="education2"> College</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" onChange={(e) => setED3(e.target.value)}id="education3" name="education3" value="Trade School" value={ED3}/>
+                                    <input type="checkbox" onChange={(e) => setED3(e.target.value)}id="education3" name="education3" value={ED3}/>
                                     <label htmlFor="education3"> Trade School</label>
                                 </div>
                             </div><br></br>
@@ -155,11 +155,11 @@ emailjs.sendForm('service_r9b69jg', 'template_ifl9jsv', e.target, 'user_OIuQ0ZFN
                             <div className='education-group2'style={{display:'inline-flex'}}>
                                 <p>Did you graduate?:</p><t></t>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" onChange={(e) => setGrad1(e.target.value)}id="graduate1" name="graduate1" value="Yes" value={Grad1}/>
+                                    <input type="checkbox" onChange={(e) => setGrad1(e.target.value)}id="graduate1" name="graduate1" value={Grad1}/>
                                     <label htmlFor="graduate1">Yes</label>
                                 </div>
                                 <div className='checkbox1' style={{paddingInline:'10px'}}>
-                                    <input type="checkbox" onChange={(e) => setGrad2(e.target.value)}id="graduate2" name="graduate2" value="No" value={Grad2}/>
+                                    <input type="checkbox" onChange={(e) => setGrad2(e.target.value)}id="graduate2" name="graduate2"  value={Grad2}/>
                                     <label htmlFor="graduate2">No</label>
                                 </div>
                             </div><br></br>
