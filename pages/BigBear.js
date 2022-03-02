@@ -8,7 +8,7 @@ function BigBear (){
     return (
         <Fragment>
             
-                <Title>Big Bear Linen Services</Title>
+                
                 <meta
                 name='descirption' 
                 content='CLS Medical is located in Acworth Georgia and services all of Georgia including the Metro Atlanta Area.' 
@@ -27,7 +27,7 @@ function BigBear (){
                 <link rel="shortcut icon" href="images/favicon.ico"/>
                 <meta name= 'keywords' content='contact, kennesaw, email, phone, call' />
             
-            <div className= 'bigbear'>
+            <div className= "bigbear">
                 <div className='bear-hero'>
                     <Image className='bigbear-img' src='/images/Bigbearhero.png' alt='bigbearimg' width='4500px' height='2000px'></Image>
                 </div>

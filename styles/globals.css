@@ -1117,3 +1117,7 @@ box-sizing: border-box;
   }
 } 
 /*Nav bar shrinking*/
+
+.MuiSvgIcon-root {
+  display: none;
+}
