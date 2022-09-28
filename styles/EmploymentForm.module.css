@@ -1,3 +1,8 @@
+.disc-message {
+    text-align: left;
+    font-style: italic;
+    font-size: 11px;
+}
 .input{
     background-color: transparent;
 }
@@ -6,3 +11,8 @@ input#resumeFile {
     border-radius: 20px;
 }
 
+
+hr.MuiDivider-root {
+    border-radius: 50px;
+    background-color: #797878;
+}
