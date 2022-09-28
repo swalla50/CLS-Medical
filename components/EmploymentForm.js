@@ -95,7 +95,7 @@ export default function EmploymentForm() {
         <Card>
             <CardContent style={{ paddingBottom: '55px' }}>
                 <div className='contact-form-container' style={{ paddingInline: '5%' }}>
-                    <form enctype="multipart/form-data" method="post" id='form-contact' onSubmit={sendEmail} style={{ background: 'white', borderRadius: '20px', padding: '10px', boxShadow: '0 32px 20px rgb(0 0 0 / 26%)' }}>
+                    <form encType="multipart/form-data" method="post" id='form-contact' onSubmit={sendEmail} style={{ background: 'white', borderRadius: '20px', padding: '10px', boxShadow: '0 32px 20px rgb(0 0 0 / 26%)' }}>
                         <div className='form-group'>
                             <div className='contactrow' style={{ textAlign: 'center' }}>
                                 <h2>Come Join the CLS Medical Team!</h2>
