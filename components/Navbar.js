@@ -132,7 +132,7 @@ function Navbar() {
                     <FontAwesomeIcon icon={faChevronDown} />
                   </button>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><a className="dropdown-item" href='/one' type="button">O.N.E.</a></li>
+                    <li><Link className="dropdown-item" href='/one' type="button">O.N.E.</Link></li>
                   </ul>
                 </div>
                 {/* <Link
@@ -156,8 +156,8 @@ function Navbar() {
                     <FontAwesomeIcon icon={faChevronDown} />
                   </button>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenu3">
-                    <li><a className="dropdown-item" href='/about' type="button">Who We Are</a></li>
-                    <li><a className="dropdown-item" href='/faq' type="button">FAQ</a></li>
+                    <li><Link className="dropdown-item" href='/about' type="button">Who We Are</Link></li>
+                    <li><Link className="dropdown-item" href='/faq' type="button">FAQ</Link></li>
                   </ul>
                 </div>
                 
