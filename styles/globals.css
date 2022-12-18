@@ -224,7 +224,7 @@ button {
 
 .testimonials{
   text-align: center;
-  padding-top: 10%;
+  /* padding-top: 10%; */
   color: rgb(0, 51, 142);
 }
 .myCarousel > p{
@@ -1120,4 +1120,66 @@ box-sizing: border-box;
 
 .MuiSvgIcon-root {
   display: none;
+}
+button#dropdownMenu2 {
+  color: #00338e;
+  height: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: transparent;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  margin: none !important;
+}
+button#dropdownMenu2:focus {
+border:none;
+box-shadow: none;
+}
+button#dropdownMenu3 {
+  color: #00338e;
+  height: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+  background: transparent;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  margin: none !important;
+}
+button#dropdownMenu3:focus {
+border:none;
+box-shadow: none;
+}
+.dropdown-menu.dropdown:hover  {
+  display: block;
+  margin-top: 0;
+}
+.dropdown-menu {
+  margin-top: 0;
+}
+
+a.dropdown-item:hover {
+  color: #00338e;
+  font-weight: 700;
+  border-radius:20px;
+  -webkit-transition: all 1s ease;
+  transition: all 200ms ease-in-out;
+}
+a.dropdown-item:not(:hover) {
+  -webkit-transition: all 1s ease;
+  transition: all 200ms ease-in-out;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+button.btn.btn--primary.btn--large {
+  border: solid white 2px;
+  color: white;
+}
+button.btn.btn--outline.btn--large {
+  border: solid white 2px;
+  color: white;
 }

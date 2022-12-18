@@ -48,7 +48,7 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       </div>
-      <div className='cards-container2' style={{textAlign: '-webkit-center'}}>
+      {/* <div className='cards-container2' style={{textAlign: '-webkit-center'}}>
       <CardActionArea style={{maxWidth: '800px',borderRadius: '2%',boxShadow:'0 32px 20px rgb(0 0 0 / 26%)'}}>
         <CardMedia
           className={classes.media}
@@ -65,7 +65,7 @@ export default function MediaCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      </div>
+      </div> */}
       <style jsx>{`
               .cards-container1 {
                 text-align: -webkit-center;

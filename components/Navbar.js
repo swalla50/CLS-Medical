@@ -1,78 +1,81 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import Dropdown from '../components/Dropdown';
 import Dropdown2 from './Dopdown2';
 import { Fragment } from 'react';
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark,faBars, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
-    const [dropdown2, setDropdown2] = useState(false);
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+  const [dropdown2, setDropdown2] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-    const onMouseEnter = () => {
-        if (window.innerWidth < 960) {
-          setDropdown(false);
-        } else {
-          setDropdown(true);
-        }
-      };
-    
-      const onMouseLeave = () => {
-        if (window.innerWidth < 960) {
-          setDropdown(false);
-        } else {
-          setDropdown(false);
-        }
-      };
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
 
-      const onMouseEnter2 = () => {
-        if (window.innerWidth < 960) {
-          setDropdown2(false);
-        } else {
-          setDropdown2(true);
-        }
-      };
-    
-      const onMouseLeave2 = () => {
-        if (window.innerWidth < 960) {
-          setDropdown2(false);
-        } else {
-          setDropdown2(false);
-        }
-      };
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
 
-      const [scrollY, setScrollY] = useState(0);
-      useEffect(() => {
-        const handleScroll = () => {
-          setScrollY(window.scrollY);
-        };
-    
-        // just trigger this so that the initial state 
-        // is updated as soon as the component is mounted
-        // related: https://stackoverflow.com/a/63408216
-        handleScroll();
-    
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-    
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, []);
-    
-    return (
-      
-        <Fragment>
-            <nav className={scrollY > 20 ? "navbar active" : "navbar"} id= 'navbar'>
-            <div className='menu-icon' onClick={handleClick}>
-                        <i className= {click ? 'fas fa-times' : 'fas fa-bars'}/>
-            </div>
-                <ul className='sponsor-list' style={{listStyleType:'none', display:'inline-flex',marginTop:'20px' ,justifyContent:'center'}}>
+  const onMouseEnter2 = () => {
+    if (window.innerWidth < 960) {
+      setDropdown2(false);
+    } else {
+      setDropdown2(true);
+    }
+  };
+
+  const onMouseLeave2 = () => {
+    if (window.innerWidth < 960) {
+      setDropdown2(false);
+    } else {
+      setDropdown2(false);
+    }
+  };
+
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    // just trigger this so that the initial state 
+    // is updated as soon as the component is mounted
+    // related: https://stackoverflow.com/a/63408216
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
+
+    <Fragment>
+      <nav className={scrollY > 20 ? "navbar active" : "navbar"} id='navbar'>
+        <div className='menu-icon' onClick={handleClick}>
+          {click ? <FontAwesomeIcon style={{color:'red'}} icon={faXmark} /> : <FontAwesomeIcon style={{color:'red'}} icon={faBars} />} 
+        </div>
+        {/* <ul className='sponsor-list' style={{listStyleType:'none', display:'inline-flex',marginTop:'20px' ,justifyContent:'center'}}>
                     <li className='sponsor-item'>
                         <Link href='https://rockforareason.org/' className='logo-sponsor-item' onClick={closeMobileMenu}>
                             <a><Image classname='partner-logo'src='/images/rockfar.png' alt='rfar'  height="70px" width="70px"/></a>
@@ -87,113 +90,135 @@ function Navbar() {
                         <Link href='https://www.southernproperlinen.com/' className='logo-sponsor-item' onClick={closeMobileMenu}>
                             <a><Image classname='partner-logo'src='/images/southern.png' alt='soutehernproper'  height="70px" width="100px" /></a>
                         </Link>
-                    </li>
-                </ul>
-                    
-                <div className={scrollY > 20 ? "upper-nav1 active" : "upper-nav1"}>
+                    </li> */}
+        {/* </ul> */}
+
+        {/* <div className={scrollY > 20 ? "upper-nav1 active" : "upper-nav1"}>
                 </div>
-                <div className={scrollY > 20 ? "upper-nav2 active" : "upper-nav2"}>
+                <div className={scrollY > 20 ? "upper-nav2 active" : "upper-nav2"}> */}
+        {/* </div> */}
+
+        <div className='lower-nav'>
+
+          <Link className="navbar-container-logo" style={{ display: 'inline-block', justifyContent: 'center', alignItems: 'center', height: 'auto', maxWidth: '1500px', textAlign: 'center' }} id='logo' href='/'>
+            <Image src="/images/transparentlogo.png" height="50px" width="150px" alt="Logo" />
+          </Link>
+
+          <div className="navbar-container" >
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <li className='nav-item'>
+                <Link href='/' className='nav-links' onClick={closeMobileMenu}>
+                  <a>HOME</a>
+                </Link>
+              </li>
+              <li className='nav-item'>
+                <Link
+                  href='/services'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  <a>SERVICES</a>
+                </Link>
+              </li>
+              <li
+                className='nav-item dropdown'
+                onMouseEnter={onMouseEnter2}
+                onMouseLeave={onMouseLeave2}
+              >
+
+                <div class="btn-group">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    PROGRAMS
+                    <FontAwesomeIcon icon={faChevronDown} />
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a class="dropdown-item" href='/one' type="button">O.N.E.</a></li>
+                  </ul>
+                </div>
+                {/* <Link
+                  href='/VIP'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  <a>PROGRAMS <i className="fas fa-plus" style={{ height: '15px' }} /></a>
+                </Link>
+                {dropdown2 && <Dropdown2 />} */}
+              </li>
+              <li
+                className='nav-item'
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              >
+                
+                <div class="btn-group" data-hover="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                    ABOUT
+                    <FontAwesomeIcon icon={faChevronDown} />
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                    <li><a class="dropdown-item" href='/about' type="button">Who We Are</a></li>
+                    <li><a class="dropdown-item" href='/faq' type="button">FAQ</a></li>
+                  </ul>
                 </div>
                 
-                <div className='lower-nav'>
-
-                <Link className = "navbar-container-logo"  style={{display:'inline-block', justifyContent: 'center', alignItems:'center', height: 'auto', maxWidth: '1500px', textAlign: 'center'}}id='logo' href='/'>
-                    <Image src = "/images/transparentlogo.png" height="50px" width="150px" alt = "Logo"/>
+                {/* <Link
+                  href='/about'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  <a>ABOUT <i className="fas fa-plus" style={{ height: '15px' }} /></a>
                 </Link>
-
-                <div className = "navbar-container" >
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li className='nav-item'>
-                            <Link href='/' className='nav-links' onClick={closeMobileMenu}>
-                                <a>HOME</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link
-                            href='/services'
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                            >
-                                <a>SERVICES</a>
-                            </Link>
-                        </li>
-                        <li
-                        className='nav-item'
-                        onMouseEnter={onMouseEnter2}
-                        onMouseLeave={onMouseLeave2}
-                        >
-                            <Link
-                            href='/VIP'
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                            >
-                                <a>PROGRAMS <i className="fas fa-plus" style={{height:'15px'}}/></a>
-                            </Link>
-                            {dropdown2 && <Dropdown2 />}
-                        </li>
-                        <li
-                        className='nav-item'
-                        onMouseEnter={onMouseEnter}
-                        onMouseLeave={onMouseLeave}
-                        >
-                            <Link
-                            href='/about'
-                            className='nav-links'
-                            onClick={closeMobileMenu}
-                            >
-                                <a>ABOUT <i className="fas fa-plus" style={{height:'15px'}}/></a>
-                            </Link>
-                            {dropdown && <Dropdown />}
-                        </li>
-                        <li className='nav-item'>
-                            <Link href='/contact' className='nav-links' onClick={closeMobileMenu}>
-                                <a>CONTACT</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/' className='nav-links' >
-                               <a onClick={closeMobileMenu}>HOME</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/services' className='nav-links'>
-                               <a onClick={closeMobileMenu}>SERIVICES</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/VIP' className='nav-links'>
-                               <a onClick={closeMobileMenu}>V.I.P.</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/one' className='nav-links'>
-                               <a onClick={closeMobileMenu}>O.N.E.</a>
-                            </Link>
-                        </li>
-                         <li className='nav-item1'>
-                            <Link href='/about' className='nav-links'>
-                               <a onClick={closeMobileMenu}>THE TEAM</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/faq' className='nav-links'>
-                               <a onClick={closeMobileMenu}>FAQ</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/employment' className='nav-links'>
-                                <a onClick={closeMobileMenu}>EMPLOYMENT</a>
-                            </Link>
-                        </li>
-                        <li className='nav-item1'>
-                            <Link href='/contact' className='nav-links'>
-                                <a onClick={closeMobileMenu}>CONTACT</a>
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-                </div>
-                <style jsx>{`
+                {dropdown && <Dropdown />} */}
+              </li>
+              <li className='nav-item'>
+                <Link href='/contact' className='nav-links' onClick={closeMobileMenu}>
+                  <a>CONTACT</a>
+                </Link>
+              </li>
+              <li className='nav-item1'>
+                <Link href='/' className='nav-links' >
+                  <a onClick={closeMobileMenu}>HOME</a>
+                </Link>
+              </li>
+              <li className='nav-item1'>
+                <Link href='/services' className='nav-links'>
+                  <a onClick={closeMobileMenu}>SERIVICES</a>
+                </Link>
+              </li>
+              {/* <li className='nav-item1'>
+                <Link href='/VIP' className='nav-links'>
+                  <a onClick={closeMobileMenu}>V.I.P.</a>
+                </Link>
+              </li> */}
+              <li className='nav-item1'>
+                <Link href='/one' className='nav-links'>
+                  <a onClick={closeMobileMenu}>O.N.E.</a>
+                </Link>
+              </li>
+              <li className='nav-item1'>
+                <Link href='/about' className='nav-links'>
+                  <a onClick={closeMobileMenu}>ABOUT</a>
+                </Link>
+              </li>
+              <li className='nav-item1'>
+                <Link href='/faq' className='nav-links'>
+                  <a onClick={closeMobileMenu}>FAQ</a>
+                </Link>
+              </li>
+              {/* <li className='nav-item1'>
+                <Link href='/employment' className='nav-links'>
+                  <a onClick={closeMobileMenu}>EMPLOYMENT</a>
+                </Link>
+              </li> */}
+              <li className='nav-item1'>
+                <Link href='/contact' className='nav-links'>
+                  <a onClick={closeMobileMenu}>CONTACT</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <style jsx>{`
 
                 .navbar {
                     background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
@@ -283,6 +308,7 @@ function Navbar() {
                   a{
                     color: #00338e;
                     padding:15px;
+                    text-decoration: none;
                   }
                   .nav-menu {
                     display: inline-flex;
@@ -473,11 +499,11 @@ function Navbar() {
                   -webkit-box-sizing: border-box;
                 }
                 `}
-                </style>
+        </style>
 
-            </nav>
-        </Fragment>
-    );
+      </nav>
+    </Fragment>
+  );
 }
 
 export default Navbar

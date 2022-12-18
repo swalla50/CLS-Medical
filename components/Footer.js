@@ -77,11 +77,11 @@ function Footer() {
           <div className='footer-link-wrapper'>
             <div className='footer-link-items'>
               <h2>Social Media</h2>
-              <Link href='https://www.facebook.com/clsmedical/'>CLS Facebook</Link>
+              {/* <Link href='https://www.facebook.com/clsmedical/'>CLS Facebook</Link>
               <Link href='https://www.linkedin.com/company/clsmedical/mycompany/?viewAsMember=true'>CLS Linkedin</Link>
               <Link href='https://www.facebook.com/RockForAReasonATL'>Rock Facebook</Link>
               <Link href='https://www.facebook.com/SPLinens'>Southern Proper Facebook</Link>
-              <Link href='https://www.linkedin.com/company/southernproperlinen/?viewAsMember=true'>Southern Proper Linkedin</Link>
+              <Link href='https://www.linkedin.com/company/southernproperlinen/?viewAsMember=true'>Southern Proper Linkedin</Link> */}
             </div>
           </div>
         </div>

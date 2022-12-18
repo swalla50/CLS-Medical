@@ -7,7 +7,8 @@ import '../styles/App.module.css';
 
 function HeroSection() {
     return (
-        <div className='hero-container' style={{backgroundImage:`url("./images/heroimage.jpg")`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
+        <div className='hero-container' style={{background:'rgb(0 153 213)', backgroundSize:'cover'}}>
+        {/* <div className='hero-container' style={{backgroundImage:`url("./images/heroimage.jpg")`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}> ---Removed due to request */}
             <h1>High quality products and reliable service at an affordable rate.</h1>
             <p> We are the answer to your linen needs.</p>
             <div className='hero-btns'>
