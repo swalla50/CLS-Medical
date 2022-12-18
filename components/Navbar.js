@@ -126,13 +126,13 @@ function Navbar() {
                 onMouseLeave={onMouseLeave2}
               >
 
-                <div class="btn-group">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                <div className="btn-group">
+                  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                     PROGRAMS
                     <FontAwesomeIcon icon={faChevronDown} />
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><a class="dropdown-item" href='/one' type="button">O.N.E.</a></li>
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a className="dropdown-item" href='/one' type="button">O.N.E.</a></li>
                   </ul>
                 </div>
                 {/* <Link
@@ -150,14 +150,14 @@ function Navbar() {
                 onMouseLeave={onMouseLeave}
               >
                 
-                <div class="btn-group" data-hover="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
+                <div className="btn-group" data-hover="dropdown">
+                  <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu3" data-bs-toggle="dropdown" aria-expanded="false">
                     ABOUT
                     <FontAwesomeIcon icon={faChevronDown} />
                   </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                    <li><a class="dropdown-item" href='/about' type="button">Who We Are</a></li>
-                    <li><a class="dropdown-item" href='/faq' type="button">FAQ</a></li>
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenu3">
+                    <li><a className="dropdown-item" href='/about' type="button">Who We Are</a></li>
+                    <li><a className="dropdown-item" href='/faq' type="button">FAQ</a></li>
                   </ul>
                 </div>
                 
