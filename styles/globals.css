@@ -1171,6 +1171,7 @@ a.dropdown-item:hover {
 a.dropdown-item:not(:hover) {
   -webkit-transition: all 1s ease;
   transition: all 200ms ease-in-out;
+  text-decoration: none;
 }
 .dropdown-toggle::after {
   display: none !important;
